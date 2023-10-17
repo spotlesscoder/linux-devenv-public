@@ -12,9 +12,13 @@ echo "Disable apt recommends and suggests (/etc/apt/apt.conf.d/44noextrapackages
 apt install gnome-core gnome-shell gdm3 tmux sudo tree git gnome-terminal nautilus
 # (needs complete logout and re-login to be effective)
 /sbin/usermod -aG sudo user
+########### REBOOT!
+/sbin/reboot
+
+
 sudo systemctl enable gdm3
 
-apt install -y gnome-tweaks \
+sudo apt install -y gnome-tweaks \
  gnome-disk-utility \
  neofetch unzip unrar software-properties-commin curl wget vim \
  deja-dup gnome-shell-extension-manager nvidia-driver gnome-control-center \
@@ -53,10 +57,10 @@ echo 'pref("general.config.filename", "user.js");' >> /etc/firefox/pref/vendor-u
 # Configure system settings (example: swappiness)
 echo "vm.swappiness=10" >> /etc/sysctl.conf
 
-apt update
-apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
-apt install -y tmux \
+sudo apt install -y tmux \
   keepassxc \
   tree \
   gedit \
@@ -80,12 +84,12 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/cu
 chsh -s /usr/bin/zsh
 
 # Virtualbox dependencies
-apt install gcc make perl libqt5help5 libqt5sql5 \
+sudo apt install gcc make perl libqt5help5 libqt5sql5 \
  libqt5opengl5 libqt5xml5 flatpak acpid tlp tlp-rdw powertop \
  psmisc linux-headers-amd64
 wget https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
-dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
-usermod -aG vboxusers user
+sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
+sudo usermod -aG vboxusers user
 
 # Allow touchpad touch
 gsettings set org.gnome.desktop.peripherals.touchpad.tap-to-click true

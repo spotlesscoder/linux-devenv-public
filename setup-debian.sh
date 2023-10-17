@@ -9,8 +9,9 @@ systemctl enable ufw
 cp etc/apt/apt.conf.d/44noextrapackages /etc/apt/apt.conf.d/
 echo "Disable apt recommends and suggests (/etc/apt/apt.conf.d/44noextrapackages)"
 
-apt install gnome-shell gdm3 tmux sudo tree git gnome-terminal nautilus
-/sbin/usermod -aG sudo user (needs complete logout and re-login to be effective)
+apt install gnome-core gnome-shell gdm3 tmux sudo tree git gnome-terminal nautilus
+# (needs complete logout and re-login to be effective)
+/sbin/usermod -aG sudo user
 sudo systemctl enable gdm3
 
 apt install -y gnome-tweaks \

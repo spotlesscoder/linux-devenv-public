@@ -91,6 +91,8 @@ wget https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158
 sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
 sudo usermod -aG vboxusers user
 
+sudo apt install gnome-tweaks dconf-editor gnome-shell-extension-dash-to-dock gnome-shell-extensions gnome-shell-extension-weather papirus-icon-theme
+
 # change settings for power management
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 900

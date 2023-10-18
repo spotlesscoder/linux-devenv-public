@@ -98,6 +98,14 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'no
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
 gsettings set org.gnome.desktop.session idle-delay 180
 
+# night light
+gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature uint32 2137
+gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic false
+gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 0.0
+gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 0.0
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+
+
 # Allow touchpad touch
 gsettings set org.gnome.desktop.peripherals.touchpad.tap-to-click true
 

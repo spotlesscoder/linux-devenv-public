@@ -91,6 +91,13 @@ wget https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158
 sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
 sudo usermod -aG vboxusers user
 
+# change settings for power management
+gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 900
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+gsettings set org.gnome.desktop.session idle-delay 180
+
 # Allow touchpad touch
 gsettings set org.gnome.desktop.peripherals.touchpad.tap-to-click true
 

@@ -46,7 +46,8 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
-sudo apt install brave-browser
+sudo apt update
+sudo apt install brave-browser docker.io
 
 # Add Arkenfox user.js for Firefox privacy and security configuration
 mkdir -p /etc/firefox/pref

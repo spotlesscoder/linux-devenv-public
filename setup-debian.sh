@@ -31,9 +31,6 @@ sudo apt install -y gnome-tweaks \
  systemsettings task-desktop sed zsh \
  ntfs-3g
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install com.brave.Browser org.mozilla.firefox org.libreoffice.Libreoffice
-
 sudo systemctl enable tlp
 sudo systemctl start tlp
 
@@ -88,7 +85,7 @@ chsh -s /usr/bin/zsh
 
 # Virtualbox dependencies
 sudo apt install gcc make perl libqt5help5 libqt5sql5 \
- libqt5opengl5 libqt5xml5 flatpak acpid tlp tlp-rdw powertop \
+ libqt5opengl5 libqt5xml5 acpid tlp tlp-rdw powertop \
  psmisc linux-headers-amd64
 wget https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
 sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb

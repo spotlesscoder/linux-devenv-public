@@ -12,11 +12,9 @@ echo "Disable apt recommends and suggests (/etc/apt/apt.conf.d/44noextrapackages
 apt install gnome-core gnome-shell gdm3 tmux sudo tree git gnome-terminal nautilus
 # (needs complete logout and re-login to be effective)
 /sbin/usermod -aG sudo user
+systemctl enable gdm3
 ########### REBOOT!
 /sbin/reboot
-
-
-sudo systemctl enable gdm3
 
 sudo apt install -y gnome-tweaks \
  gnome-disk-utility \

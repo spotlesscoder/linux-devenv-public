@@ -18,11 +18,11 @@ systemctl enable gdm3
 
 sudo apt install -y gnome-tweaks \
  gnome-disk-utility \
- neofetch unzip unrar software-properties-commin curl wget vim \
- deja-dup gnome-shell-extension-manager nvidia-driver gnome-control-center \
+ neofetch unzip software-properties-common curl wget vim \
+ deja-dup gnome-shell-extension-manager gnome-control-center \
  gnome-backgrounds gnome-bluetooth-sendto gnome-font-viewer gnome-clocks \
  gnome-settings-daemon gnome-software-common gnome-system-monitor gnome-weather \
- xdg-utils chrome-gnome-shell network-manager-gnome network-manager-vpn network-manager \
+ xdg-utils chrome-gnome-shell network-manager-gnome network-manager \
  fwupd ghostscript gnome-clocks gnome-calculator gnome-calculator gnome-color-manager \
  gnome-keyring-pkcs11 gnome-remote-desktop gnome-initial-setup jq kdiff3 \ 
  ffmpeg vlc nautilus-extension-gnome-terminal p7zip-full power-profiles-daemon \
@@ -36,10 +36,10 @@ sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
 
 # Add third-party repositories (Docker and Brave Browser)
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"| sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
 sudo apt update
 sudo apt install brave-browser docker.io

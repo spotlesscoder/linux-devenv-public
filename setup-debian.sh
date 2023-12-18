@@ -112,7 +112,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad.tap-to-click true
 # Set keybindings
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
 "$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings | \
-sed -e "s|]|, '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']|")" && \
+sed -e "s|\']|\', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']|")" && \
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ \
 name 'Open Terminal' && \
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ \

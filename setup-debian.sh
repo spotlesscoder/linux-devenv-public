@@ -24,7 +24,7 @@ sudo apt install -y gnome-tweaks \
  gnome-settings-daemon gnome-software-common gnome-system-monitor gnome-weather \
  xdg-utils chrome-gnome-shell network-manager-gnome network-manager \
  fwupd ghostscript gnome-clocks gnome-calculator gnome-calculator gnome-color-manager \
- gnome-keyring-pkcs11 gnome-remote-desktop gnome-initial-setup jq kdiff3 \ 
+ gnome-keyring-pkcs11 gnome-remote-desktop gnome-initial-setup jq kdiff3 \
  ffmpeg vlc nautilus-extension-gnome-terminal p7zip-full power-profiles-daemon \
  systemsettings task-desktop sed zsh \
  ntfs-3g

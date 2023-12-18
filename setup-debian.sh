@@ -9,7 +9,7 @@ systemctl enable ufw
 cp etc/apt/apt.conf.d/44noextrapackages /etc/apt/apt.conf.d/
 echo "Disable apt recommends and suggests (/etc/apt/apt.conf.d/44noextrapackages)"
 
-apt install gnome-core gnome-shell gdm3 tmux sudo tree git gnome-terminal nautilus
+apt install -y gnome-core gnome-shell gdm3 tmux sudo tree git gnome-terminal nautilus
 # (needs complete logout and re-login to be effective)
 /sbin/usermod -aG sudo user
 systemctl enable gdm3
@@ -42,7 +42,7 @@ sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://b
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"| sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
 sudo apt update
-sudo apt install brave-browser docker.io
+sudo apt install -y brave-browser docker.io
 
 # Add Arkenfox user.js for Firefox privacy and security configuration
 mkdir -p /etc/firefox/pref
@@ -82,14 +82,14 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/cu
 chsh -s /usr/bin/zsh
 
 # Virtualbox dependencies
-sudo apt install gcc make perl libqt5help5 libqt5sql5 \
+sudo apt install -y gcc make perl libqt5help5 libqt5sql5 \
  libqt5opengl5 libqt5xml5 acpid tlp tlp-rdw powertop \
  psmisc linux-headers-amd64
 wget https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
 sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
 sudo usermod -aG vboxusers user
 
-sudo apt install gnome-tweaks dconf-editor gnome-shell-extension-dash-to-dock gnome-shell-extensions gnome-shell-extension-weather papirus-icon-theme
+sudo apt install -y gnome-tweaks dconf-editor gnome-shell-extension-dash-to-dock gnome-shell-extensions gnome-shell-extension-weather papirus-icon-theme
 
 # change settings for power management
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'

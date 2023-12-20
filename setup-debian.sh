@@ -25,7 +25,7 @@ sudo apt install -y gnome-tweaks \
  xdg-utils chrome-gnome-shell network-manager-gnome network-manager \
  fwupd ghostscript gnome-clocks gnome-calculator gnome-calculator gnome-color-manager \
  gnome-keyring-pkcs11 gnome-remote-desktop gnome-initial-setup jq kdiff3 \
- ffmpeg vlc nautilus-extension-gnome-terminal p7zip-full power-profiles-daemon \
+ ffmpeg vlc nautilus-extension-gnome-terminal p7zip-full \
  systemsettings task-desktop sed zsh tlp tlp-rdw powertop \
  ntfs-3g
 

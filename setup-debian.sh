@@ -86,7 +86,9 @@ sudo apt install -y gcc make perl libqt5help5 libqt5sql5 \
  libqt5opengl5 libqt5xml5 acpid \
  psmisc linux-headers-amd64
 wget https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
-sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
+wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb
+sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb veracrypt-1.26.7-Debian-12-amd64.deb
+rm *.deb
 sudo usermod -aG vboxusers user
 
 sudo apt install -y gnome-tweaks dconf-editor gnome-shell-extension-dash-to-dock gnome-shell-extensions gnome-shell-extension-weather papirus-icon-theme

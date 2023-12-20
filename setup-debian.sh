@@ -107,7 +107,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 
 
 # Allow touchpad touch
-gsettings set org.gnome.desktop.peripherals.touchpad.tap-to-click true
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
 # Set keybindings
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \

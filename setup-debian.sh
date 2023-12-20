@@ -26,7 +26,7 @@ sudo apt install -y gnome-tweaks \
  fwupd ghostscript gnome-clocks gnome-calculator gnome-calculator gnome-color-manager \
  gnome-keyring-pkcs11 gnome-remote-desktop gnome-initial-setup jq kdiff3 \
  ffmpeg vlc nautilus-extension-gnome-terminal p7zip-full power-profiles-daemon \
- systemsettings task-desktop sed zsh \
+ systemsettings task-desktop sed zsh tlp tlp-rdw powertop \
  ntfs-3g
 
 sudo systemctl enable tlp
@@ -83,7 +83,7 @@ chsh -s /usr/bin/zsh
 
 # Virtualbox dependencies
 sudo apt install -y gcc make perl libqt5help5 libqt5sql5 \
- libqt5opengl5 libqt5xml5 acpid tlp tlp-rdw powertop \
+ libqt5opengl5 libqt5xml5 acpid \
  psmisc linux-headers-amd64
 wget https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
 sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
@@ -99,7 +99,7 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'su
 gsettings set org.gnome.desktop.session idle-delay 180
 
 # night light
-gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature uint32 2137
+gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 2137
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic false
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 0.0
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 0.0

@@ -79,7 +79,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # Install Powerlevel10k theme for Oh-My-Zsh:
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
-# Virtualbox dependencies
+# Virtualbox and veracrypt dependencies
 sudo apt install -y gcc make perl libqt5help5 libqt5sql5 \
  libqt5opengl5 libqt5xml5 acpid \
  psmisc linux-headers-amd64 \

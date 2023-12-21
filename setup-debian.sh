@@ -90,7 +90,7 @@ sudo dpkg -i virtualbox.deb veracrypt.deb
 rm *.deb
 sudo usermod -aG vboxusers user
 
-sudo apt install -y gnome-tweaks dconf-editor gnome-shell-extension-dash-to-dock gnome-shell-extensions gnome-shell-extension-weather papirus-icon-theme
+sudo apt install -y gnome-tweaks dconf-editor gnome-shell-extensions gnome-shell-extension-weather papirus-icon-theme
 
 # change settings for power management
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'

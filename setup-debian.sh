@@ -84,8 +84,8 @@ sudo apt install -y gcc make perl libqt5help5 libqt5sql5 \
  libqt5opengl5 libqt5xml5 acpid \
  psmisc linux-headers-amd64 \
  libccid pcscd libwxgtk3.2-1 libwxbase3.2-1 libpcre2-32-0
-wget https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Debian~bookworm_amd64.deb virtualbox.deb
-wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb veracrypt.deb
+wget https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Debian~bookworm_amd64.deb -O virtualbox.deb
+wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb -O veracrypt.deb
 sudo dpkg -i virtualbox.deb veracrypt.deb
 rm *.deb
 sudo usermod -aG vboxusers user

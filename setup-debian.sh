@@ -32,7 +32,7 @@ sudo apt install -y gnome-tweaks \
 sudo systemctl enable tlp
 sudo systemctl start tlp
 
-sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
+sudo sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
 
 # Add third-party repositories (Docker and Brave Browser)
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -79,16 +79,14 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # Install Powerlevel10k theme for Oh-My-Zsh:
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
-chsh -s /usr/bin/zsh
-
 # Virtualbox dependencies
 sudo apt install -y gcc make perl libqt5help5 libqt5sql5 \
  libqt5opengl5 libqt5xml5 acpid \
  psmisc linux-headers-amd64 \
  libccid pcscd libwxgtk3.2-1 libwxbase3.2-1 libpcre2-32-0
-wget https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
-wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb
-sudo dpkg -i virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb veracrypt-1.26.7-Debian-12-amd64.deb
+wget https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Debian~bookworm_amd64.deb virtualbox.deb
+wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb veracrypt.deb
+sudo dpkg -i virtualbox.deb veracrypt.deb
 rm *.deb
 sudo usermod -aG vboxusers user
 

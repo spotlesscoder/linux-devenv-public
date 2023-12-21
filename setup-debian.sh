@@ -26,8 +26,9 @@ sudo apt install -y gnome-tweaks \
  fwupd ghostscript gnome-clocks gnome-calculator gnome-calculator gnome-color-manager \
  gnome-keyring-pkcs11 gnome-remote-desktop gnome-initial-setup jq kdiff3 \
  ffmpeg vlc nautilus-extension-gnome-terminal p7zip-full \
- systemsettings task-desktop sed zsh tlp tlp-rdw powertop \
- ntfs-3g
+ systemsettings task-desktop sed zsh ntfs-3g
+
+sudo apt install tlp tlp-rdw powertop
 
 sudo systemctl enable tlp
 sudo systemctl start tlp

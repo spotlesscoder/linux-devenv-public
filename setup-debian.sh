@@ -17,7 +17,7 @@ systemctl enable gdm3
 /sbin/reboot
 
 sudo apt install -y gnome-tweaks \
- gnome-disk-utility \
+ gnome-disk-utility libblockdev-crypto2 \
  neofetch unzip software-properties-common curl wget vim \
  deja-dup gnome-shell-extension-manager gnome-control-center \
  gnome-backgrounds gnome-bluetooth-sendto gnome-font-viewer gnome-clocks \

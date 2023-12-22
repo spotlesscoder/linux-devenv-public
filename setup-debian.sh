@@ -93,6 +93,11 @@ sudo usermod -aG vboxusers user
 
 sudo apt install -y gnome-tweaks dconf-editor gnome-shell-extensions gnome-shell-extension-weather papirus-icon-theme
 
+read -p "Always spoof MAC addresses? (y/n)" answer
+if [ "$answer" == "y" ]; then
+  sudo cp etc/systemd/network/01-mac.link /etc/systemd/network/
+fi
+
 # change settings for power management
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 900

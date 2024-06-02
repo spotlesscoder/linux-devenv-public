@@ -17,7 +17,7 @@ systemctl enable gdm3
 /sbin/reboot
 
 sudo apt install -y gnome-tweaks \
- gnome-disk-utility libblockdev-crypto2 \
+ gnome-disk-utility \
  neofetch unzip software-properties-common curl wget vim \
  deja-dup gnome-shell-extension-manager gnome-control-center \
  gnome-backgrounds gnome-bluetooth-sendto gnome-font-viewer gnome-clocks \
@@ -91,7 +91,7 @@ sudo dpkg -i virtualbox.deb veracrypt.deb
 rm *.deb
 sudo usermod -aG vboxusers user
 
-sudo apt install -y gnome-tweaks dconf-editor gnome-shell-extensions gnome-shell-extension-weather papirus-icon-theme
+sudo apt install -y gnome-tweaks dconf-editor gnome-shell-extensions papirus-icon-theme
 
 read -p "Always spoof MAC addresses? (y/n)" answer
 if [ "$answer" == "y" ]; then

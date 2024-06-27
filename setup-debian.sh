@@ -13,8 +13,11 @@ apt install -y gnome-core gnome-shell gdm3 tmux sudo tree git gnome-terminal nau
 # (needs complete logout and re-login to be effective)
 /sbin/usermod -aG sudo user
 systemctl enable gdm3
-########### REBOOT!
-/sbin/reboot
+
+read -p "Reboot? y/n" answer
+if [ $answer == "y" ]; then
+  /sbin/reboot
+fi
 
 sudo apt install -y gnome-tweaks \
  gnome-disk-utility \

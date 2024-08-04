@@ -3,8 +3,8 @@
 chmod +x *.sh
 
 apt install ufw
-ufw default deny incoming
-ufw default allow outgoing
+/sbin/ufw default deny incoming
+/sbin/ufw default allow outgoing
 systemctl enable ufw
 cp etc/apt/apt.conf.d/44noextrapackages /etc/apt/apt.conf.d/
 echo "Disable apt recommends and suggests (/etc/apt/apt.conf.d/44noextrapackages)"

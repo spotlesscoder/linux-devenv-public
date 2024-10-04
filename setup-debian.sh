@@ -6,7 +6,8 @@ apt install ufw
 /sbin/ufw default deny incoming
 /sbin/ufw default allow outgoing
 systemctl enable ufw
-cp etc/apt/apt.conf.d/44noextrapackages /etc/apt/apt.conf.d/
+echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/44noextrapackages
+echo 'APT::Install-Suggests "false";' > /etc/apt/apt.conf.d/44noextrapackages
 echo "Disable apt recommends and suggests (/etc/apt/apt.conf.d/44noextrapackages)"
 
 apt install -y gnome-core gnome-shell gdm3 tmux sudo tree git gnome-terminal nautilus

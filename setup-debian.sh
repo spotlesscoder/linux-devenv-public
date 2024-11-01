@@ -2,7 +2,7 @@
 
 chmod +x *.sh
 
-apt install ufw
+apt install -y ufw
 /sbin/ufw default deny incoming
 /sbin/ufw default allow outgoing
 systemctl enable ufw
@@ -32,12 +32,12 @@ sudo apt install -y gnome-tweaks \
  ffmpeg vlc nautilus-extension-gnome-terminal p7zip-full \
  systemsettings task-desktop sed zsh ntfs-3g
 
-sudo apt install tlp tlp-rdw powertop
+sudo apt install -y tlp tlp-rdw powertop
 
 sudo systemctl enable tlp
 sudo systemctl start tlp
 
-sudo sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
+sudo sed -i 's/main/main contrib non-free/' /etc//sources.list
 
 # Add third-party repositories (Docker and Brave Browser)
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg

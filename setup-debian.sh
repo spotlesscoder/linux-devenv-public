@@ -30,7 +30,7 @@ sudo apt install -y gnome-tweaks \
  fwupd ghostscript gnome-clocks gnome-calculator gnome-calculator gnome-color-manager \
  gnome-keyring-pkcs11 gnome-remote-desktop gnome-initial-setup jq kdiff3 \
  ffmpeg vlc nautilus-extension-gnome-terminal p7zip-full \
- systemsettings task-desktop sed zsh ntfs-3g
+ systemsettings task-desktop sed zsh ntfs-3g keepassxc
 
 sudo apt install -y tlp tlp-rdw powertop
 
@@ -64,7 +64,6 @@ sudo apt update
 sudo apt upgrade -y
 
 sudo apt install -y tmux \
-  keepassxc \
   tree \
   gedit \
   ncdu \

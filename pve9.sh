@@ -22,15 +22,13 @@ echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/44noextrapackages
 echo 'APT::Install-Suggests "false";' > /etc/apt/apt.conf.d/44noextrapackages
 echo "Disable apt recommends and suggests (/etc/apt/apt.conf.d/44noextrapackages)"
 
-sudo apt install -y \
+apt install -y \
   curl \
-  diff3 \
   ffmpeg \
   jq \
   ncdu \
   p7zip-full \
   sed \
-  software-properties-common \
   tmux \
   tree \
   vim \
